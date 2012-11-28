@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!-- Jon Higgins 11.27
+	Introduction to Programming
+	Project 5 game- V.08 -->
+	
+	<title>Come out to play</title>
+	    <link rel="stylesheet" type="text/css" href="p5.css" media="screen"/>
+      <script type="text/JavaScript" src="p5x2 location.js"></script>
+      <script type="text/JavaScript" src="move5.js"></script>
+      <script type="text/JavaScript" src="inventory5.js"></script>
+   
+   <style type= "text/css">
+      body {  background-image:url(http://canadianonlinegamers.com/wp-content/uploads/2012/08/Max-Payne-Disorganized-600x337.jpg);
+              background-position:bottom right;
+              background-repeat: no-repeat;
+              background-attachment:fixed;
+              background-color:#121212;
+             }
+     </style>
+     <style>
+			.Higgins{font-family:Magneto ; font-weight:bold ; color:#ffffff ; font-size:50px;}
+			.Jon{font-family:Magneto ; font-weight:bold ; color:#ffffff ; font-size:15px;}
+      </style>
+	</head>
+   <body onload= "init()"> 
+      
+      <p class="Higgins">
+        Revenge: Best Served Cold.
+      </p>
+      <br>
+      <textarea id= "taGame"
+        rows="6" cols="50"> </textarea>
+      <br>   
+      
+        <p class="Jon">
+          Enter Command:
+        </p>
+        <Input type="text"  
+          onKeyDown= "if (event.keyCode == 13) document.getElementById('enterButton').click()"
+          id="txtInput">
+       
+       <input type="button"
+            id="enterButton"
+            value="Go"
+            onclick="btn_go_click();">
+             
+        <br>
+     
+        <input type="button"
+          value="North"
+          id="btn_north"
+          onclick="move_north();">
+
+          <input type="button"
+              value="South"
+              id="btn_south"
+              onclick="move_south();">  
+               
+           <input type="button"
+              value="East"
+              id="btn_east"
+              onclick="move_east();">
+
+          <input type="button"
+              value="West"
+              id="btn_west"
+              onclick="move_west();"> 
+            <br>
+            <br>
+            
+         <input type= "button" 
+            value= "Inventory"  
+            onclick= "Btn_inventory_click()" />
+            <br>
+            <br>
+            
+          <input type= "button" 
+            value= "Score"  
+            onclick= "Btn_Score_Click()" />
+            
+          <input type= "button" 
+            value= "help"  
+            onclick= "Btn_help_click()" />
+            <br>
+          <img src="map.jpg"  width="400" height="350" alt="map.jpg">
+            <br>
+        <a href= "mailto:Jonathan.Higgins1@marist.edu">
+          E-mail me with questions.
+        </a>
+ 
+    </body>
+</html>
